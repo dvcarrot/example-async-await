@@ -3,7 +3,7 @@ const $ = require('gulp-load-plugins')();
 
 gulp.task('scripts', function () {
     return gulp.src('src/*.js')
-        .pipe($.browserify({transform: ['babelify']}))
+        .pipe($.browserify())
         .pipe($.uglify())
         .pipe(gulp.dest('dist'))
 });
